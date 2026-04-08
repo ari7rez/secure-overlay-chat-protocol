@@ -4,6 +4,11 @@
 A secure messaging and file transfer system implemented in Python.  
 This project demonstrates protocol design, cryptographic security, and distributed communication across multiple servers.
 
+## Key Highlights
+- Designed a secure messaging protocol from scratch
+- Implemented cryptographic primitives in a real system
+- Built a distributed multi-server communication model
+
 ---
 
 ## Features
