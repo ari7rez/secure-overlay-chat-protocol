@@ -259,3 +259,14 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+# database files
+*.db
+*.db-shm
+*.db-wal
+
+# python cache
+__pycache__/
+*.pyc
+
+# env
+.venv/
