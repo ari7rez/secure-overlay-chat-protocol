@@ -1,0 +1,53 @@
+Here’s a clear text block you can paste into your README.md (or keep as a .txt note) to explain how to run the demo file transfer test:
+
+⸻
+
+🔹 Demo File Transfer Test
+
+We provide a helper script at tools/demo_file_test.py that automatically:
+	•	Starts a server on port 9001
+	•	Launches Bob and Alice clients
+	•	Sends a test file (test_file.txt) from Alice → Bob
+	•	Verifies that the file is received in Bob’s downloads/ folder
+
+⸻
+
+Steps
+	1.	Stop any running servers or clients
+	•	If you started them manually, press Ctrl + C in those terminals.
+	•	Or free the port with:
+
+lsof -i :9001
+kill -9 <PID>
+
+
+	2.	Run the demo script
+From project root:
+
+PYTHONPATH=$(pwd) python tools/demo_file_test.py
+
+
+	3.	Expected output
+You should see logs like:
+
+[demo] starting server...
+[demo] starting Bob client...
+[demo] starting Alice client...
+[demo] sending file from Alice -> Bob...
+[demo] file arrived at Bob’s downloads!
+[demo] content: hello from alice
+
+
+	4.	Check the received file
+
+cat downloads/test_file.txt
+
+
+
+⸻
+
+✅ This verifies that the end-to-end file transfer is working correctly.
+
+⸻
+
+Would you like me to also write a separate section for troubleshooting (e.g. “if you see address already in use” or “file not found in downloads”)?
